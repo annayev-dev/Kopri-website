@@ -1,0 +1,970 @@
+<!DOCTYPE html>
+<html lang="ru" data-theme="dark">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description"
+        content="Köpri — бесплатный офлайн-переводчик с гибридной камерой OCR, огромным разговорником и мгновенным переводом. Flutter + C++17.">
+    <title>Köpri — офлайн переводчик | Bridge between languages</title>
+    <link rel="icon" href="assets/app_icon.png">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fontsource/manrope@latest/400.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fontsource/manrope@latest/500.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fontsource/manrope@latest/600.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fontsource/manrope@latest/700.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fontsource/manrope@latest/800.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fontsource/jetbrains-mono@latest/400.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fontsource/jetbrains-mono@latest/700.css">
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+
+    <!-- PRELOADER -->
+    <div id="preloader">
+        <img src="assets/app_icon.png" alt="Köpri"
+            width="84" height="84">
+        <div class="load-bar"><i></i></div>
+    </div>
+
+    <div id="scrollProgress"></div>
+
+    <!-- NAVBAR -->
+    <header id="navbar">
+        <div class="container nav-inner">
+            <a class="brand" href="#home">
+                <img src="assets/app_icon.png" alt="Köpri icon"
+                    width="40" height="40">
+                Kö<b>pri</b>
+            </a>
+            <nav class="nav-links">
+                <a href="#features" data-i18n="nav_features"></a>
+                <a href="#ocr" data-i18n="nav_ocr"></a>
+                <a href="#screens" data-i18n="nav_screens"></a>
+                <a href="#tech" data-i18n="nav_tech"></a>
+                <a href="#team" data-i18n="nav_team"></a>
+                <a href="#faq" data-i18n="nav_faq"></a>
+            </nav>
+            <div class="nav-actions">
+                <div class="lang-switch" role="group" aria-label="Language">
+                    <button class="lang-btn" data-lang="tk">TK</button>
+                    <button class="lang-btn" data-lang="ru">RU</button>
+                    <button class="lang-btn" data-lang="en">EN</button>
+                </div>
+                <button id="themeToggle" aria-label="Theme" aria-pressed="false">
+                    <svg class="sun" width="19" height="19" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                        stroke-width="2" stroke-linecap="round">
+                        <circle cx="12" cy="12" r="4.5" />
+                        <path
+                            d="M12 2v2.5M12 19.5V22M2 12h2.5M19.5 12H22M4.9 4.9l1.8 1.8M17.3 17.3l1.8 1.8M4.9 19.1l1.8-1.8M17.3 6.7l1.8-1.8" />
+                    </svg>
+                    <svg class="moon" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                        stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                        <path d="M21 12.8A9 9 0 1 1 11.2 3a7 7 0 0 0 9.8 9.8z" />
+                    </svg>
+                </button>
+                <a class="btn-nav" href="#download" data-i18n="nav_download"></a>
+                <button id="burgerBtn" aria-label="Menu" aria-controls="mobileMenu" aria-expanded="false"><span></span><span></span><span></span></button>
+            </div>
+        </div>
+    </header>
+    <nav id="mobileMenu">
+        <a href="#features" data-i18n="nav_features"></a>
+        <a href="#ocr" data-i18n="nav_ocr"></a>
+        <a href="#screens" data-i18n="nav_screens"></a>
+        <a href="#tech" data-i18n="nav_tech"></a>
+        <a href="#team" data-i18n="nav_team"></a>
+        <a href="#faq" data-i18n="nav_faq"></a>
+        <a href="#download" data-i18n="nav_download"></a>
+    </nav>
+
+    <main>
+        <!-- ============ HERO ============ -->
+        <section id="home">
+            <div class="grid-overlay"></div>
+            <div class="blob blob-1"></div>
+            <div class="blob blob-2"></div>
+            <div class="container hero-grid">
+                <div>
+                    <div class="hero-badges">
+                        <span class="badge"><span class="dot"></span><span data-i18n="hero_badge_offline"></span></span>
+                        <span class="badge blue" data-i18n="hero_badge_open"></span>
+                    </div>
+                    <h1><span class="accent" data-i18n="hero_title_a"></span> <span data-i18n="hero_title_b"></span>
+                    </h1>
+                    <p class="hero-sub" data-i18n="hero_sub"></p>
+                    <div class="hero-ctas">
+                        <a class="btn btn-primary" href="https://github.com/aynazar-sylyyew-dev/K-pri-App-for-phone"
+                            target="_blank" rel="noopener">
+                            <svg width="19" height="19" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                <path d="M12 3v12m0 0l-4.5-4.5M12 15l4.5-4.5M4 20h16" />
+                            </svg>
+                            <span data-i18n="hero_cta_apk"></span>
+                        </a>
+                        <a class="btn btn-ghost" href="https://github.com/aynazar-sylyyew-dev/K-pri-App-for-phone"
+                            target="_blank" rel="noopener">
+                            <svg width="19" height="19" viewBox="0 0 24 24" fill="currentColor">
+                                <path
+                                    d="M12 .5A11.5 11.5 0 0 0 .5 12a11.5 11.5 0 0 0 7.86 10.92c.58.1.79-.25.79-.56v-2c-3.2.7-3.87-1.54-3.87-1.54-.53-1.33-1.28-1.69-1.28-1.69-1.05-.72.08-.7.08-.7 1.16.08 1.77 1.19 1.77 1.19 1.03 1.77 2.7 1.26 3.36.96.1-.75.4-1.26.73-1.55-2.55-.29-5.23-1.28-5.23-5.68 0-1.26.45-2.29 1.19-3.1-.12-.29-.52-1.46.11-3.05 0 0 .97-.31 3.18 1.18a11 11 0 0 1 5.8 0c2.2-1.49 3.17-1.18 3.17-1.18.63 1.59.23 2.76.11 3.05.74.81 1.19 1.84 1.19 3.1 0 4.41-2.69 5.38-5.25 5.67.41.36.78 1.06.78 2.14v3.17c0 .31.2.67.8.56A11.5 11.5 0 0 0 23.5 12 11.5 11.5 0 0 0 12 .5z" />
+                            </svg>
+                            GitHub
+                        </a>
+                        <a class="btn-link" href="#features"><span data-i18n="hero_cta_features"></span>
+                            <svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+                                <path d="M12 5v14m0 0l-6-6m6 6l6-6" />
+                            </svg>
+                        </a>
+                    </div>
+                    <div class="hero-meta">
+                        <span>Apache 2.0</span><i></i>
+                        <span>Flutter 3.x</span><i></i>
+                        <span>C++17 · FFI</span><i></i>
+                        <span>Android 5.0+</span>
+                    </div>
+                </div>
+                <div class="phone-stage" id="phoneStage">
+                    <div class="phone-glow"></div>
+                    <div class="phone" id="heroPhone">
+                        <img src="assets/1.jpg" alt="Köpri app screen" loading="eager" width="262" height="553">
+                    </div>
+                    <div class="float-chip chip-1"><span class="ic"><svg width="16" height="16" viewBox="0 0 24 24"
+                                fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round">
+                                <path d="M13 2L4 14h6l-1 8 9-12h-6l1-8z" />
+                            </svg></span>~0.3s · OCR</div>
+                    <div class="float-chip chip-2"><span class="ic"><svg width="16" height="16" viewBox="0 0 24 24"
+                                fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round">
+                                <path
+                                    d="M2 2l20 20M8.5 16.5a5 5 0 0 1 7 0M5 13a10 10 0 0 1 5.2-2.7M12 20h.01M16.5 13.5A10 10 0 0 1 19 13M2 8.8A15 15 0 0 1 6.4 6M12 4c3.9 0 7.4 1.5 10 4" />
+                            </svg></span><span data-i18n="hero_chip_offline"></span></div>
+                    <div class="float-chip chip-3"><span class="ic"><svg width="16" height="16" viewBox="0 0 24 24"
+                                fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round">
+                                <rect x="4" y="4" width="16" height="16" rx="3" />
+                                <path d="M9 9h6v6H9z" />
+                            </svg></span>C++17 · 10–60×</div>
+                </div>
+            </div>
+            <div class="scroll-hint"><i></i>scroll</div>
+        </section>
+
+        <!-- ============ STATS ============ -->
+        <section id="stats">
+            <div class="container stats-grid">
+                <div class="stat-card reveal">
+                    <div class="stat-num"><span data-count="50">0</span>+</div>
+                    <div class="stat-label" data-i18n="stat_langs"></div>
+                </div>
+                <div class="stat-card reveal">
+                    <div class="stat-num"><span data-count="800">0</span></div>
+                    <div class="stat-label" data-i18n="stat_phrases"></div>
+                </div>
+                <div class="stat-card reveal">
+                    <div class="stat-num"><span data-count="38">0</span></div>
+                    <div class="stat-label" data-i18n="stat_models"></div>
+                </div>
+                <div class="stat-card reveal">
+                    <div class="stat-num"><span data-count="0.3" data-decimals="1">0</span>s</div>
+                    <div class="stat-label" data-i18n="stat_speed"></div>
+                </div>
+                <div class="stat-card reveal">
+                    <div class="stat-num"><span data-count="187">0</span></div>
+                    <div class="stat-label" data-i18n="stat_pkgs"></div>
+                </div>
+                <div class="stat-card reveal">
+                    <div class="stat-num"><span data-count="60">0</span>×</div>
+                    <div class="stat-label" data-i18n="stat_fast"></div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ============ MARQUEE ============ -->
+        <div class="marquee" aria-hidden="true">
+            <div class="marquee-track">
+                <span>Salam</span><span>Привет</span><span>Hello</span><span>Merhaba</span><span>Сәлем</span><span>你好</span><span>こんにちは</span><span>안녕하세요</span><span>مرحبا</span><span>नमस्ते</span><span>Bonjour</span><span>Hola</span><span>Ciao</span><span>Hallo</span><span>Salom</span><span>Xin
+                    chào</span><span>Γειά σου</span><span>Olá</span>
+                <span>Salam</span><span>Привет</span><span>Hello</span><span>Merhaba</span><span>Сәлем</span><span>你好</span><span>こんにちは</span><span>안녕하세요</span><span>مرحبا</span><span>नमस्ते</span><span>Bonjour</span><span>Hola</span><span>Ciao</span><span>Hallo</span><span>Salom</span><span>Xin
+                    chào</span><span>Γειά σου</span><span>Olá</span>
+            </div>
+        </div>
+
+        <!-- ============ FEATURES ============ -->
+        <section id="features">
+            <div class="container">
+                <div class="sec-head center reveal">
+                    <span class="eyebrow" data-i18n="features_eyebrow"></span>
+                    <h2 class="sec-title" data-i18n="features_title"></h2>
+                    <p class="sec-sub" data-i18n="features_sub"></p>
+                </div>
+                <div class="features-grid">
+                    <div class="feature-card reveal">
+                        <div class="feature-ic"><svg width="24" height="24" viewBox="0 0 24 24" fill="none"
+                                stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                <path
+                                    d="M23 19a2 2 0 0 1-2 2H3a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h4l2-3h6l2 3h4a2 2 0 0 1 2 2z" />
+                                <circle cx="12" cy="13" r="4" />
+                            </svg></div>
+                        <h3 data-i18n="f1_title"></h3>
+                        <p data-i18n="f1_text"></p>
+                    </div>
+                    <div class="feature-card reveal">
+                        <div class="feature-ic"><svg width="24" height="24" viewBox="0 0 24 24" fill="none"
+                                stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                <path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z" />
+                                <path d="M8 9h8M8 12h5" />
+                            </svg></div>
+                        <h3 data-i18n="f2_title"></h3>
+                        <p data-i18n="f2_text"></p>
+                    </div>
+                    <div class="feature-card reveal">
+                        <div class="feature-ic"><svg width="24" height="24" viewBox="0 0 24 24" fill="none"
+                                stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                <path d="M2 3h6a4 4 0 0 1 4 4v14a3 3 0 0 0-3-3H2z" />
+                                <path d="M22 3h-6a4 4 0 0 0-4 4v14a3 3 0 0 1 3-3h7z" />
+                            </svg></div>
+                        <h3 data-i18n="f3_title"></h3>
+                        <p data-i18n="f3_text"></p>
+                    </div>
+                    <div class="feature-card reveal">
+                        <div class="feature-ic"><svg width="24" height="24" viewBox="0 0 24 24" fill="none"
+                                stroke="currentColor" stroke-width="2" stroke-linecap="round">
+                                <path
+                                    d="M2 2l20 20M8.5 16.5a5 5 0 0 1 7 0M5 13a10 10 0 0 1 5.2-2.7M12 20h.01M16.5 13.5A10 10 0 0 1 19 13M2 8.8A15 15 0 0 1 6.4 6M12 4c3.9 0 7.4 1.5 10 4" />
+                            </svg></div>
+                        <h3 data-i18n="f4_title"></h3>
+                        <p data-i18n="f4_text"></p>
+                    </div>
+                    <div class="feature-card reveal">
+                        <div class="feature-ic"><svg width="24" height="24" viewBox="0 0 24 24" fill="none"
+                                stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                <circle cx="12" cy="12" r="9" />
+                                <path d="M12 7v5l3.5 3.5" />
+                            </svg></div>
+                        <h3 data-i18n="f5_title"></h3>
+                        <p data-i18n="f5_text"></p>
+                    </div>
+                    <div class="feature-card reveal">
+                        <div class="feature-ic"><svg width="24" height="24" viewBox="0 0 24 24" fill="none"
+                                stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                <path d="M12 2l3.1 6.3 6.9 1-5 4.9 1.2 6.8L12 17.8 5.8 21l1.2-6.8-5-4.9 6.9-1z" />
+                            </svg></div>
+                        <h3 data-i18n="f6_title"></h3>
+                        <p data-i18n="f6_text"></p>
+                    </div>
+                    <div class="feature-card reveal">
+                        <div class="feature-ic"><svg width="24" height="24" viewBox="0 0 24 24" fill="none"
+                                stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                <circle cx="12" cy="12" r="9" />
+                                <path
+                                    d="M12 3a9 9 0 0 0 0 18c1 0 1.5-.6 1.5-1.5 0-.8-.5-1.2-.5-2 0-1.1.9-2 2-2h2.5a4 4 0 0 0 4-4c0-5-4.5-8.5-9.5-8.5z" />
+                                <circle cx="8" cy="10" r="1" />
+                                <circle cx="12" cy="7" r="1" />
+                            </svg></div>
+                        <h3 data-i18n="f7_title"></h3>
+                        <p data-i18n="f7_text"></p>
+                    </div>
+                    <div class="feature-card reveal">
+                        <div class="feature-ic"><svg width="24" height="24" viewBox="0 0 24 24" fill="none"
+                                stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                <circle cx="12" cy="8" r="4" />
+                                <path d="M4 21c0-4 3.6-7 8-7s8 3 8 7" />
+                            </svg></div>
+                        <h3 data-i18n="f8_title"></h3>
+                        <p data-i18n="f8_text"></p>
+                    </div>
+                    <div class="feature-card reveal">
+                        <div class="feature-ic"><svg width="24" height="24" viewBox="0 0 24 24" fill="none"
+                                stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                <path d="M13 2L4 14h6l-1 8 9-12h-6l1-8z" />
+                            </svg></div>
+                        <h3 data-i18n="f9_title"></h3>
+                        <p data-i18n="f9_text"></p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ============ HYBRID OCR ============ -->
+        <section id="ocr">
+            <div class="container ocr-grid">
+                <div class="reveal">
+                    <span class="eyebrow">Hybrid OCR</span>
+                    <h2 class="sec-title" data-i18n="ocr_title"></h2>
+                    <p class="sec-sub" data-i18n="ocr_text"></p>
+                    <div class="ocr-cards">
+                        <div class="ocr-card">
+                            <div class="ic"><svg width="22" height="22" viewBox="0 0 24 24" fill="none"
+                                    stroke="currentColor" stroke-width="2" stroke-linecap="round">
+                                    <path d="M13 2L4 14h6l-1 8 9-12h-6l1-8z" />
+                                </svg></div>
+                            <div>
+                                <h4>Google ML Kit</h4>
+                                <p data-i18n="ocr_ml_sub"></p>
+                            </div>
+                        </div>
+                        <div class="ocr-card">
+                            <div class="ic"><svg width="22" height="22" viewBox="0 0 24 24" fill="none"
+                                    stroke="currentColor" stroke-width="2" stroke-linecap="round">
+                                    <rect x="3" y="5" width="18" height="14" rx="3" />
+                                    <path d="M7 9h4M7 12h6M7 15h4M15 9h2" />
+                                </svg></div>
+                            <div>
+                                <h4>Tesseract OCR</h4>
+                                <p data-i18n="ocr_tes_sub"></p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="sec-sub"
+                        style="font-weight:800;font-size:13px;letter-spacing:.12em;text-transform:uppercase;color:var(--accent)"
+                        data-i18n="ocr_scripts_label"></div>
+                    <div class="script-chips">
+                        <span>Latin</span><span>Кириллица · Cyrillic</span><span>العربية · Arabic</span><span>中文 ·
+                            CJK</span><span>देवनागरी · Devanagari</span>
+                    </div>
+                </div>
+                <div class="ocr-visual reveal">
+                    <div class="scan-box">
+                        <div class="scan-line"></div>
+                        <div>&gt; SALAM, KÖPRI! <span class="hl">✓ latin</span></div>
+                        <div>&gt; ПРИВЕТ, МИР! <span class="hl">✓ cyrillic</span></div>
+                        <div>&gt; مرحبا بالعالم <span class="hl">✓ arabic</span></div>
+                        <div>&gt; こんにちは世界 <span class="hl">✓ cjk</span></div>
+                    </div>
+                    <div class="sec-sub"
+                        style="font-weight:800;font-size:13px;letter-spacing:.12em;text-transform:uppercase;color:var(--accent);margin-bottom:18px"
+                        data-i18n="ocr_speed_label"></div>
+                    <div class="meter">
+                        <div class="meter-head"><b>ML Kit · Latin</b><span>~0.3s</span></div>
+                        <div class="meter-bar">
+                            <div class="meter-fill" style="--w:96%"></div>
+                        </div>
+                    </div>
+                    <div class="meter">
+                        <div class="meter-head"><b>Tesseract · Cyrillic / CJK</b><span>fallback</span></div>
+                        <div class="meter-bar">
+                            <div class="meter-fill" style="--w:68%"></div>
+                        </div>
+                    </div>
+                    <div class="ocr-note"><svg width="17" height="17" viewBox="0 0 24 24" fill="none"
+                            stroke="currentColor" stroke-width="2" stroke-linecap="round">
+                            <circle cx="12" cy="12" r="9" />
+                            <path d="M12 8v4M12 16h.01" />
+                        </svg><span data-i18n="ocr_note"></span></div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ============ DEMO ============ -->
+        <section id="demo">
+            <div class="container">
+                <div class="sec-head center reveal">
+                    <span class="eyebrow" data-i18n="demo_eyebrow"></span>
+                    <h2 class="sec-title" data-i18n="demo_title"></h2>
+                    <p class="sec-sub" data-i18n="demo_sub"></p>
+                </div>
+                <div class="demo-card reveal">
+                    <div class="demo-left">
+                        <h3>EN → ?</h3>
+                        <div class="phrase-chips" id="phraseChips"></div>
+                    </div>
+                    <div class="demo-right">
+                        <h3 data-i18n="demo_target_label"></h3>
+                        <div class="demo-targets">
+                            <button class="demo-lang" data-target="ru">RU</button>
+                            <button class="demo-lang" data-target="tk">TK</button>
+                            <button class="demo-lang" data-target="en">EN</button>
+                        </div>
+                        <button class="btn btn-primary" id="demoBtn">
+                            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                <path d="M5 8l6 6M4 14l6-6 2-3M2 5h7M7 2v3M22 12l-4.5 9L13 12l4.5-9z" />
+                            </svg>
+                            <span data-i18n="demo_btn"></span>
+                        </button>
+                        <div class="demo-result"><span class="demo-speed">~0.3s ⚡</span><span id="demoText"></span><span
+                                class="caret"></span></div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ============ PHRASEBOOK ============ -->
+        <section id="phrasebook">
+            <div class="container">
+                <div class="sec-head center reveal">
+                    <span class="eyebrow" data-i18n="pb_eyebrow"></span>
+                    <h2 class="sec-title" data-i18n="pb_title"></h2>
+                    <p class="sec-sub" data-i18n="pb_sub"></p>
+                </div>
+                <div class="pb-grid">
+                    <div class="pb-card reveal">
+                        <div class="pb-ic">👋</div>
+                        <div>
+                            <h4 data-i18n="cat1"></h4><span>2 · 8</span>
+                        </div><svg class="chev" width="18" height="18" viewBox="0 0 24 24" fill="none"
+                            stroke="currentColor" stroke-width="2.4" stroke-linecap="round">
+                            <path d="M9 6l6 6-6 6" />
+                        </svg>
+                    </div>
+                    <div class="pb-card reveal">
+                        <div class="pb-ic">🤝</div>
+                        <div>
+                            <h4 data-i18n="cat2"></h4><span>2 · 8</span>
+                        </div><svg class="chev" width="18" height="18" viewBox="0 0 24 24" fill="none"
+                            stroke="currentColor" stroke-width="2.4" stroke-linecap="round">
+                            <path d="M9 6l6 6-6 6" />
+                        </svg>
+                    </div>
+                    <div class="pb-card reveal">
+                        <div class="pb-ic">👨‍👩‍👧</div>
+                        <div>
+                            <h4 data-i18n="cat3"></h4><span>2 · 8</span>
+                        </div><svg class="chev" width="18" height="18" viewBox="0 0 24 24" fill="none"
+                            stroke="currentColor" stroke-width="2.4" stroke-linecap="round">
+                            <path d="M9 6l6 6-6 6" />
+                        </svg>
+                    </div>
+                    <div class="pb-card reveal">
+                        <div class="pb-ic">🍽️</div>
+                        <div>
+                            <h4 data-i18n="cat4"></h4><span>3 · 13</span>
+                        </div><svg class="chev" width="18" height="18" viewBox="0 0 24 24" fill="none"
+                            stroke="currentColor" stroke-width="2.4" stroke-linecap="round">
+                            <path d="M9 6l6 6-6 6" />
+                        </svg>
+                    </div>
+                    <div class="pb-card reveal">
+                        <div class="pb-ic">🥤</div>
+                        <div>
+                            <h4 data-i18n="cat5"></h4><span>3 · 13</span>
+                        </div><svg class="chev" width="18" height="18" viewBox="0 0 24 24" fill="none"
+                            stroke="currentColor" stroke-width="2.4" stroke-linecap="round">
+                            <path d="M9 6l6 6-6 6" />
+                        </svg>
+                    </div>
+                    <div class="pb-card reveal">
+                        <div class="pb-ic">🧳</div>
+                        <div>
+                            <h4 data-i18n="cat6"></h4><span>4 · 21</span>
+                        </div><svg class="chev" width="18" height="18" viewBox="0 0 24 24" fill="none"
+                            stroke="currentColor" stroke-width="2.4" stroke-linecap="round">
+                            <path d="M9 6l6 6-6 6" />
+                        </svg>
+                    </div>
+                    <div class="pb-card reveal">
+                        <div class="pb-ic">🛍️</div>
+                        <div>
+                            <h4 data-i18n="cat7"></h4><span>3 · 17</span>
+                        </div><svg class="chev" width="18" height="18" viewBox="0 0 24 24" fill="none"
+                            stroke="currentColor" stroke-width="2.4" stroke-linecap="round">
+                            <path d="M9 6l6 6-6 6" />
+                        </svg>
+                    </div>
+                    <div class="pb-card reveal">
+                        <div class="pb-ic"></div>
+                        <div>
+                            <h4 data-i18n="cat8"></h4><span>2 · 12</span>
+                        </div><svg class="chev" width="18" height="18" viewBox="0 0 24 24" fill="none"
+                            stroke="currentColor" stroke-width="2.4" stroke-linecap="round">
+                            <path d="M9 6l6 6-6 6" />
+                        </svg>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ============ GAMIFICATION ============ -->
+        <section id="gamification">
+            <div class="container">
+                <div class="sec-head center reveal">
+                    <span class="eyebrow" data-i18n="gm_eyebrow"></span>
+                    <h2 class="sec-title" data-i18n="gm_title"></h2>
+                    <p class="sec-sub" data-i18n="gm_sub"></p>
+                </div>
+                <div class="gm-grid">
+                    <div class="gm-card reveal">
+                        <div class="gm-top"><span class="gm-emoji">🌱</span>
+                            <div>
+                                <h4 data-i18n="gm_level"></h4>
+                                <div class="sub" data-i18n="gm_xp_sub"></div>
+                            </div><span class="gm-xp">640 XP</span>
+                        </div>
+                        <div class="gm-bar">
+                            <div class="gm-fill" style="--w:64%"></div>
+                        </div>
+                        <div class="gm-small">640 / 1000 XP</div>
+                    </div>
+                    <div class="gm-card glow reveal">
+                        <div class="gm-top"><span class="gm-emoji">🔥</span>
+                            <div>
+                                <h4 data-i18n="gm_streak"></h4>
+                                <div class="sub" data-i18n="gm_streak_sub"></div>
+                            </div>
+                        </div>
+                        <div class="gm-record"><svg width="17" height="17" viewBox="0 0 24 24" fill="none"
+                                stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                <path
+                                    d="M8 21h8M12 17v4M17 4h3a2 2 0 0 1-2 4h-1M7 4H4a2 2 0 0 0 2 4h1M7 3h10v6a5 5 0 0 1-10 0z" />
+                            </svg><span data-i18n="gm_record"></span></div>
+                    </div>
+                    <div class="gm-card reveal">
+                        <div class="gm-top"><span class="gm-emoji">🚩</span>
+                            <div>
+                                <h4 data-i18n="gm_goal"></h4>
+                            </div><span class="gm-xp">7/10</span>
+                        </div>
+                        <div class="gm-bar">
+                            <div class="gm-fill" style="--w:70%"></div>
+                        </div>
+                        <div class="gm-small">7 / 10</div>
+                    </div>
+                </div>
+                <p class="gm-note reveal" data-i18n="gm_cpp"></p>
+            </div>
+        </section>
+
+        <!-- ============ SCREENSHOTS ============ -->
+        <section id="screens">
+            <div class="container">
+                <div class="sec-head center reveal">
+                    <span class="eyebrow" data-i18n="sc_eyebrow"></span>
+                    <h2 class="sec-title" data-i18n="sc_title"></h2>
+                    <p class="sec-sub" data-i18n="sc_sub"></p>
+                </div>
+                <div class="shots-wrap reveal">
+                    <div class="shots-track" id="shotsTrack">
+                        <figure class="shot">
+                                <div class="phone"><img src="assets/1.jpg" alt="Köpri settings" loading="lazy" width="262" height="553">
+                            </div>
+                            <figcaption data-i18n="sc_cap1"></figcaption>
+                        </figure>
+                        <figure class="shot">
+                                <div class="phone"><img src="assets/2.jpg" alt="Köpri licenses" loading="lazy" width="262" height="553">
+                            </div>
+                            <figcaption data-i18n="sc_cap2"></figcaption>
+                        </figure>
+                        <figure class="shot">
+                                <div class="phone"><img src="assets/3.jpg" alt="Köpri profile" loading="lazy" width="262" height="553">
+                            </div>
+                            <figcaption data-i18n="sc_cap3"></figcaption>
+                        </figure>
+                        <figure class="shot">
+                                <div class="phone"><img src="assets/4.jpg" alt="Köpri phrasebook" loading="lazy" width="262" height="553">
+                            </div>
+                            <figcaption data-i18n="sc_cap4"></figcaption>
+                        </figure>
+                    </div>
+                    <div class="shots-nav">
+                        <button class="shots-btn" id="shotsPrev" aria-label="Previous"><svg width="19" height="19"
+                                viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4"
+                                stroke-linecap="round">
+                                <path d="M15 6l-6 6 6 6" />
+                            </svg></button>
+                        <div class="shots-dots" id="shotsDots"></div>
+                        <button class="shots-btn" id="shotsNext" aria-label="Next"><svg width="19" height="19"
+                                viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4"
+                                stroke-linecap="round">
+                                <path d="M9 6l6 6-6 6" />
+                            </svg></button>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ============ TECH STACK ============ -->
+        <section id="tech">
+            <div class="container">
+                <div class="sec-head center reveal">
+                    <span class="eyebrow" data-i18n="ts_eyebrow"></span>
+                    <h2 class="sec-title" data-i18n="ts_title"></h2>
+                    <p class="sec-sub" data-i18n="ts_sub"></p>
+                </div>
+                <div class="tech-grid">
+                    <div class="tech-card reveal">
+                        <div class="tech-logo">Fl</div>
+                        <h4>Flutter 3.x</h4>
+                        <div class="role" data-i18n="ts_role_framework"></div>
+                        <p>flutter.dev</p>
+                    </div>
+                    <div class="tech-card reveal">
+                        <div class="tech-logo">Da</div>
+                        <h4>Dart 3.x</h4>
+                        <div class="role" data-i18n="ts_role_lang"></div>
+                        <p>dart.dev</p>
+                    </div>
+                    <div class="tech-card reveal">
+                        <div class="tech-logo">C+</div>
+                        <h4>C++17 · FFI</h4>
+                        <div class="role" data-i18n="ts_role_native"></div>
+                        <p>XP · streaks · stats · JSON/CSV</p>
+                    </div>
+                    <div class="tech-card reveal">
+                        <div class="tech-logo">ML</div>
+                        <h4>Google ML Kit</h4>
+                        <div class="role" data-i18n="ts_role_ocr1"></div>
+                        <p>on-device text recognition</p>
+                    </div>
+                    <div class="tech-card reveal">
+                        <div class="tech-logo">Te</div>
+                        <h4>Tesseract OCR</h4>
+                        <div class="role" data-i18n="ts_role_ocr2"></div>
+                        <p>flutter_tesseract_ocr</p>
+                    </div>
+                    <div class="tech-card reveal">
+                        <div class="tech-logo">Ca</div>
+                        <h4>camera</h4>
+                        <div class="role" data-i18n="ts_role_cam"></div>
+                        <p>pub.dev/packages/camera</p>
+                    </div>
+                    <div class="tech-card reveal">
+                        <div class="tech-logo">Hv</div>
+                        <h4>SharedPreferences / Hive</h4>
+                        <div class="role" data-i18n="ts_role_store"></div>
+                        <p>local-first storage</p>
+                    </div>
+                    <div class="tech-card reveal">
+                        <div class="tech-logo">Ar</div>
+                        <h4>Clean Architecture</h4>
+                        <div class="role" data-i18n="ts_role_arch"></div>
+                        <p>feature-first modules</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ============ NATIVE C++ ============ -->
+        <section id="native">
+            <div class="container">
+                <div class="sec-head reveal">
+                    <span class="eyebrow">C++17 · FFI</span>
+                    <h2 class="sec-title" data-i18n="nt_title"></h2>
+                    <p class="sec-sub" data-i18n="nt_sub"></p>
+                </div>
+                <div class="native-grid">
+                    <div class="terminal reveal">
+                        <div class="term-head"><i></i><i></i><i></i><span>kopri_native.so</span></div>
+                        <div class="term-body">
+                            <span class="c">// dart → native via ffi_bridge</span><br>
+                            <span class="k">final</span> xp = native.<span class="f">calcXP</span>(level: <span
+                                class="n">7</span>, xp: <span class="n">640</span>);<br>
+                            <span class="k">final</span> streak = native.<span class="f">streakDays</span>(history);<br>
+                            <span class="k">final</span> chart = native.<span class="f">weeklyStats</span>(n); <span
+                                class="c">// O(n)</span><br>
+                            <span class="k">final</span> csv = native.<span class="f">jsonToCsv</span>(export);<br>
+                            <span class="g">// ⚡ 10–60× faster than pure Dart</span>
+                        </div>
+                    </div>
+                    <div class="modules-grid">
+                        <div class="module-chip reveal">
+                            <div class="name">xp_engine<span class="tag">20×</span></div>
+                            <p data-i18n="m_xp"></p>
+                        </div>
+                        <div class="module-chip reveal">
+                            <div class="name">streak_engine<span class="tag">exact</span></div>
+                            <p data-i18n="m_streak"></p>
+                        </div>
+                        <div class="module-chip reveal">
+                            <div class="name">stats_engine<span class="tag">O(n)</span></div>
+                            <p data-i18n="m_stats"></p>
+                        </div>
+                        <div class="module-chip reveal">
+                            <div class="name">json_lite<span class="tag">zero-dep</span></div>
+                            <p data-i18n="m_json"></p>
+                        </div>
+                        <div class="module-chip reveal">
+                            <div class="name">csv_engine<span class="tag">export</span></div>
+                            <p data-i18n="m_csv"></p>
+                        </div>
+                        <div class="module-chip reveal">
+                            <div class="name">image_fast<span class="tag">512px</span></div>
+                            <p data-i18n="m_img"></p>
+                        </div>
+                        <div class="module-chip reveal">
+                            <div class="name">translate_engine<span class="tag">GTX</span></div>
+                            <p data-i18n="m_tr"></p>
+                        </div>
+                        <div class="module-chip reveal">
+                            <div class="name">ffi_bridge<span class="tag">dart↔native</span></div>
+                            <p data-i18n="m_ffi"></p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ============ PRIVACY ============ -->
+        <section id="privacy">
+            <div class="container">
+                <div class="privacy-card reveal">
+                    <div class="shield"><svg width="52" height="52" viewBox="0 0 24 24" fill="none"
+                            stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+                            <path d="M12 2l8 3.5v5.2c0 5-3.4 9.6-8 11.3-4.6-1.7-8-6.3-8-11.3V5.5z" />
+                            <path d="M9 12l2.2 2.2L15.5 9.7" />
+                        </svg></div>
+                    <div>
+                        <h2 class="sec-title" data-i18n="pv_title"></h2>
+                        <p class="sec-sub" data-i18n="pv_text"></p>
+                        <div class="privacy-points">
+                            <span><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                    stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round">
+                                    <path d="M5 13l4 4L19 7" />
+                                </svg><span data-i18n="pv_b1"></span></span>
+                            <span><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                    stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round">
+                                    <path d="M5 13l4 4L19 7" />
+                                </svg><span data-i18n="pv_b2"></span></span>
+                            <span><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                    stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round">
+                                    <path d="M5 13l4 4L19 7" />
+                                </svg><span data-i18n="pv_b3"></span></span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ============ GETTING STARTED ============ -->
+        <section id="start">
+            <div class="container">
+                <div class="sec-head center reveal">
+                    <span class="eyebrow" data-i18n="st_eyebrow"></span>
+                    <h2 class="sec-title" data-i18n="st_title"></h2>
+                    <p class="sec-sub" data-i18n="st_sub"></p>
+                </div>
+                <div class="steps">
+                    <div class="step reveal">
+                        <div class="step-num">1</div>
+                        <h4 data-i18n="st1"></h4>
+                        <div class="code-box">git clone
+                            https://github.com/aynazar-sylyyew-dev/K-pri-App-for-phone.git<button class="copy-btn"
+                                data-copy="git clone https://github.com/aynazar-sylyyew-dev/K-pri-App-for-phone.git"></button>
+                        </div>
+                    </div>
+                    <div class="step reveal">
+                        <div class="step-num">2</div>
+                        <h4 data-i18n="st2"></h4>
+                        <div class="code-box">flutter pub get<button class="copy-btn"
+                                data-copy="flutter pub get"></button></div>
+                    </div>
+                    <div class="step reveal">
+                        <div class="step-num">3</div>
+                        <h4 data-i18n="st3"></h4>
+                        <div class="code-box">flutter build apk --release<button class="copy-btn"
+                                data-copy="flutter build apk --release"></button></div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ============ TEAM ============ -->
+        <section id="team">
+            <div class="container">
+                <div class="sec-head center reveal">
+                    <span class="eyebrow" data-i18n="tm_eyebrow"></span>
+                    <h2 class="sec-title" data-i18n="tm_title"></h2>
+                    <p class="sec-sub" data-i18n="tm_sub"></p>
+                </div>
+                <div class="team-grid">
+                    <div class="team-card reveal">
+                        <div class="avatar"><img src="assets/Dovlet.jpg" alt="Annaýew Döwlet" loading="lazy"></div>
+                        <h4>Annaýew Döwlet</h4>
+                        <div class="team-role" data-i18n="tm_role_web"></div>
+                        <p data-i18n="tm_web_note"></p>
+                        <a href="https://github.com/annayev-dev" target="_blank" rel="noopener">
+                            <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor">
+                                <path
+                                    d="M12 .5A11.5 11.5 0 0 0 .5 12a11.5 11.5 0 0 0 7.86 10.92c.58.1.79-.25.79-.56v-2c-3.2.7-3.87-1.54-3.87-1.54-.53-1.33-1.28-1.69-1.28-1.69-1.05-.72.08-.7.08-.7 1.16.08 1.77 1.19 1.77 1.19 1.03 1.77 2.7 1.26 3.36.96.1-.75.4-1.26.73-1.55-2.55-.29-5.23-1.28-5.23-5.68 0-1.26.45-2.29 1.19-3.1-.12-.29-.52-1.46.11-3.05 0 0 .97-.31 3.18 1.18a11 11 0 0 1 5.8 0c2.2-1.49 3.17-1.18 3.17-1.18.63 1.59.23 2.76.11 3.05.74.81 1.19 1.84 1.19 3.1 0 4.41-2.69 5.38-5.25 5.67.41.36.78 1.06.78 2.14v3.17c0 .31.2.67.8.56A11.5 11.5 0 0 0 23.5 12 11.5 11.5 0 0 0 12 .5z" />
+                            </svg>
+                            @annayev-dev
+                        </a>
+                    </div>
+                    <div class="team-card reveal">
+                        <div class="avatar"><img src="assets/Aynazar.jpg" alt="Sylyýew Aýnazar" loading="lazy"></div>
+                        <h4>Sylyýew Aýnazar</h4>
+                        <div class="team-role" data-i18n="tm_role_android"></div>
+                        <p data-i18n="tm_android_note"></p>
+                        <a href="https://github.com/aynazar-sylyyew-dev" target="_blank" rel="noopener">
+                            <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor">
+                                <path
+                                    d="M12 .5A11.5 11.5 0 0 0 .5 12a11.5 11.5 0 0 0 7.86 10.92c.58.1.79-.25.79-.56v-2c-3.2.7-3.87-1.54-3.87-1.54-.53-1.33-1.28-1.69-1.28-1.69-1.05-.72.08-.7.08-.7 1.16.08 1.77 1.19 1.77 1.19 1.03 1.77 2.7 1.26 3.36.96.1-.75.4-1.26.73-1.55-2.55-.29-5.23-1.28-5.23-5.68 0-1.26.45-2.29 1.19-3.1-.12-.29-.52-1.46.11-3.05 0 0 .97-.31 3.18 1.18a11 11 0 0 1 5.8 0c2.2-1.49 3.17-1.18 3.17-1.18.63 1.59.23 2.76.11 3.05.74.81 1.19 1.84 1.19 3.1 0 4.41-2.69 5.38-5.25 5.67.41.36.78 1.06.78 2.14v3.17c0 .31.2.67.8.56A11.5 11.5 0 0 0 23.5 12 11.5 11.5 0 0 0 12 .5z" />
+                            </svg>
+                            @aynazar-sylyyew-dev
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ============ FAQ ============ -->
+        <section id="faq">
+            <div class="container">
+                <div class="sec-head center reveal">
+                    <span class="eyebrow">FAQ</span>
+                    <h2 class="sec-title" data-i18n="faq_title"></h2>
+                </div>
+                <div class="faq-list">
+                    <div class="faq-item reveal"><button class="faq-q" aria-expanded="false" aria-controls="faq-a1"><span data-i18n="q1"></span><svg width="20"
+                                height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6"
+                                stroke-linecap="round">
+                                <path d="M12 5v14M5 12h14" />
+                            </svg></button>
+                        <div class="faq-a" id="faq-a1">
+                            <p data-i18n="a1"></p>
+                        </div>
+                    </div>
+                    <div class="faq-item reveal"><button class="faq-q" aria-expanded="false" aria-controls="faq-a2"><span data-i18n="q2"></span><svg width="20"
+                                height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6"
+                                stroke-linecap="round">
+                                <path d="M12 5v14M5 12h14" />
+                            </svg></button>
+                        <div class="faq-a" id="faq-a2">
+                            <p data-i18n="a2"></p>
+                        </div>
+                    </div>
+                    <div class="faq-item reveal"><button class="faq-q" aria-expanded="false" aria-controls="faq-a3"><span data-i18n="q3"></span><svg width="20"
+                                height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6"
+                                stroke-linecap="round">
+                                <path d="M12 5v14M5 12h14" />
+                            </svg></button>
+                        <div class="faq-a" id="faq-a3">
+                            <p data-i18n="a3"></p>
+                        </div>
+                    </div>
+                    <div class="faq-item reveal"><button class="faq-q" aria-expanded="false" aria-controls="faq-a4"><span data-i18n="q4"></span><svg width="20"
+                                height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6"
+                                stroke-linecap="round">
+                                <path d="M12 5v14M5 12h14" />
+                            </svg></button>
+                        <div class="faq-a" id="faq-a4">
+                            <p data-i18n="a4"></p>
+                        </div>
+                    </div>
+                    <div class="faq-item reveal"><button class="faq-q" aria-expanded="false" aria-controls="faq-a5"><span data-i18n="q5"></span><svg width="20"
+                                height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6"
+                                stroke-linecap="round">
+                                <path d="M12 5v14M5 12h14" />
+                            </svg></button>
+                        <div class="faq-a" id="faq-a5">
+                            <p data-i18n="a5"></p>
+                        </div>
+                    </div>
+                    <div class="faq-item reveal"><button class="faq-q" aria-expanded="false" aria-controls="faq-a6"><span data-i18n="q6"></span><svg width="20"
+                                height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6"
+                                stroke-linecap="round">
+                                <path d="M12 5v14M5 12h14" />
+                            </svg></button>
+                        <div class="faq-a" id="faq-a6">
+                            <p data-i18n="a6"></p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="feedback">
+            <div class="container">
+                <div class="sec-head center reveal">
+                    <span class="eyebrow" data-i18n="fb_eyebrow">Feedback</span>
+                    <h2 class="sec-title" data-i18n="fb_title">Leave a comment</h2>
+                    <p class="sec-sub" data-i18n="fb_sub">Tell us what you like and what can be improved in Köpri.</p>
+                </div>
+
+                <div class="feedback-wrap reveal">
+                    <form id="feedbackForm" class="feedback-form">
+                        <div class="field-row">
+                            <label>
+                                <span data-i18n="fb_name">Name</span>
+                                <input id="feedbackName" type="text" name="name" placeholder="Your name" maxlength="80" autocomplete="name" />
+                            </label>
+                            <label>
+                                <span data-i18n="fb_email">Email (optional)</span>
+                                <input id="feedbackEmail" type="email" name="email" placeholder="name@example.com" maxlength="160" autocomplete="email" />
+                            </label>
+                        </div>
+
+                        <label>
+                            <span data-i18n="fb_message">Comment</span>
+                            <textarea id="feedbackMessage" name="message" placeholder="Write your feedback here..." minlength="3" maxlength="2000" required></textarea>
+                        </label>
+
+                        <button type="submit" class="btn btn-primary" data-i18n="fb_submit">Send</button>
+                        <p id="feedbackStatus" class="feedback-status"></p>
+                    </form>
+
+                    <div class="feedback-list-wrap" aria-live="polite">
+                        <div class="feedback-list-head">
+                            <h3 data-i18n="fb_recent">Recent comments</h3>
+                        </div>
+                        <div id="feedbackList" class="feedback-list"></div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ============ CTA ============ -->
+        <section id="download">
+            <div class="container">
+                <div class="cta-card reveal">
+                    <h2 data-i18n="cta_title"></h2>
+                    <p data-i18n="cta_sub"></p>
+                    <div class="cta-btns">
+                        <a class="btn btn-white" href="https://github.com/aynazar-sylyyew-dev/K-pri-App-for-phone"
+                            target="_blank" rel="noopener">
+                            <svg width="19" height="19" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                <path d="M12 3v12m0 0l-4.5-4.5M12 15l4.5-4.5M4 20h16" />
+                            </svg>
+                            <span data-i18n="cta_btn1"></span>
+                        </a>
+                        <a class="btn btn-outline-w" href="https://github.com/aynazar-sylyyew-dev/K-pri-App-for-phone"
+                            target="_blank" rel="noopener">⭐ <span data-i18n="cta_btn2"></span></a>
+                    </div>
+                    <div class="cta-note" data-i18n="cta_note"></div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- ============ FOOTER ============ -->
+    <footer>
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-brand">
+                    <img src="assets/app_icon.png" alt="Köpri" width="52" height="52" loading="lazy">
+                    <h3>Kö<b>pri</b></h3>
+                    <p data-i18n="ft_tag"></p>
+                </div>
+                <div class="footer-col">
+                    <h5 data-i18n="tm_eyebrow"></h5>
+                    <span>Web — Annaýew Döwlet</span>
+                    <span>Android — Sylyýew Aýnazar</span>
+                </div>
+                <div class="footer-col">
+                    <h5>Köpri</h5>
+                    <a href="#features" data-i18n="nav_features"></a>
+                    <a href="#screens" data-i18n="nav_screens"></a>
+                    <a href="#tech" data-i18n="nav_tech"></a>
+                    <a href="#faq" data-i18n="nav_faq"></a>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <span>© <span id="year"></span> Köpri · Apache License 2.0</span>
+                <span data-i18n="ft_made"></span>
+            </div>
+        </div>
+    </footer>
+
+    <button id="toTop" aria-label="Top"><svg width="20" height="20" viewBox="0 0 24 24" fill="none"
+            stroke="currentColor" stroke-width="2.6" stroke-linecap="round">
+            <path d="M12 19V5m0 0l-6 6m6-6l6 6" />
+        </svg></button>
+
+    <script src="https://www.gstatic.com/firebasejs/10.12.2/firebase-app-compat.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/10.12.2/firebase-firestore-compat.js"></script>
+    <script src="script.js"></script>
+    
+
+    
+</body>
+
+</html>
