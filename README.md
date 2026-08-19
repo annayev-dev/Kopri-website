@@ -1,6 +1,6 @@
 <div align="center">
 
-<img src="./assets/icon/app_icon.png" alt="Köpri" width="120" />
+<img src="./assets/app_icon.png" alt="Köpri" width="120" />
 
 # Köpri — Web Showcase
 
