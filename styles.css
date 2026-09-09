@@ -397,6 +397,10 @@ html[data-theme="light"] #themeToggle .moon {
     transition: .3s
 }
 
+#mobileMenu:not(.open) {
+    visibility: hidden;
+}
+
 #mobileMenu.open {
     transform: translateY(0);
     opacity: 1;
@@ -643,6 +647,82 @@ h1 .accent {
     border-radius: 50%;
     background: var(--accent);
     font-style: normal
+}
+
+.release-teaser {
+    position: relative;
+    max-width: 510px;
+    margin-top: 30px;
+    padding: 18px 54px 18px 20px;
+    border: 1px solid rgba(91, 141, 238, .42);
+    border-radius: 18px;
+    background: linear-gradient(115deg, var(--accent-soft), transparent 80%), var(--card);
+    box-shadow: 0 14px 34px rgba(30, 65, 140, .12);
+    overflow: hidden;
+}
+
+.release-teaser::before {
+    content: "";
+    position: absolute;
+    inset: 0 auto 0 0;
+    width: 3px;
+    background: linear-gradient(var(--accent), var(--accent-2));
+}
+
+.release-kicker {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    color: var(--accent);
+    font-size: 11px;
+    font-weight: 800;
+    letter-spacing: .14em;
+    text-transform: uppercase;
+}
+
+.release-spark {
+    font-size: 16px;
+    animation: pulse 1.8s ease-in-out infinite;
+}
+
+.release-version {
+    margin-left: 4px;
+    padding: 4px 8px;
+    border-radius: 7px;
+    background: var(--accent);
+    color: #fff;
+    font-family: var(--mono);
+    font-size: 10px;
+    letter-spacing: .04em;
+}
+
+.release-teaser strong {
+    display: block;
+    margin-top: 7px;
+    font-size: 18px;
+    font-weight: 800;
+}
+
+.release-teaser p {
+    max-width: 430px;
+    margin-top: 3px;
+    color: var(--muted);
+    font-size: 13px;
+    line-height: 1.5;
+}
+
+.release-arrow {
+    position: absolute;
+    top: 50%;
+    right: 20px;
+    color: var(--accent);
+    font-size: 25px;
+    transform: translateY(-50%);
+    transition: transform .25s ease;
+}
+
+.release-teaser:hover .release-arrow {
+    transform: translate(3px, -50%);
 }
 
 /* phone stage */
@@ -1824,12 +1904,12 @@ h1 .accent {
     border-radius: 14px;
     background: var(--code-bg);
     border: 1px solid #1e2a3d;
-    padding: 16px;
+    padding: 16px 112px 16px 16px;
     font-family: var(--mono);
     font-size: 12px;
+    line-height: 1.6;
     color: #a9c1e8;
-    overflow-x: auto;
-    white-space: nowrap
+    overflow-wrap: anywhere
 }
 
 .copy-btn {
@@ -2441,6 +2521,10 @@ footer {
     .pb-grid,
     .tech-grid,
     .modules-grid {
+        grid-template-columns: 1fr
+    }
+
+    .field-row {
         grid-template-columns: 1fr
     }
 
