@@ -1,5 +1,5 @@
 const firebaseConfig = {
-apiKey: "AIzaSyBzoy395WFSex-l01iq3lZ2DZAdjb9b92c",
+apiKey: "",
 authDomain: "kopri-app-6106f.firebaseapp.com",
 projectId: "kopri-app-6106f",
 storageBucket: "kopri-app-6106f.firebasestorage.app",
