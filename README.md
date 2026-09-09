@@ -1,7 +1,7 @@
 <div align="center">
 
 <img src="./assets/app_icon.png" alt="Köpri" width="120" />
-
+   <sub>
 
 <img src="./assets/cover.png" alt="cover" width="70%" />
 
