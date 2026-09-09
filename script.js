@@ -33,6 +33,7 @@ if (window.firebase && firebase.apps && firebase.apps.length === 0 && hasRealFir
             hero_title_a: "Мост между языками", hero_title_b: "— в твоём кармане",
             hero_sub: "Köpri — бесплатный офлайн-переводчик с гибридной камерой OCR, огромным разговорником и мгновенным переводом текста. Без интернета. Без облака. Без границ.",
             hero_cta_apk: "Скачать APK", hero_cta_features: "Возможности", hero_chip_offline: "100% офлайн",
+            release_aria: "Скоро выйдет обновление v2.0.0", release_kicker: "Следующее обновление", release_title: "v2.0.0 уже на горизонте", release_text: "Больше языков, умнее камера и новые способы переводить. Жди — будет мощно.",
             stat_langs: "языков", stat_phrases: "фраз в разговорнике", stat_models: "OCR-моделей", stat_speed: "секунды на распознавание", stat_pkgs: "открытых пакетов внутри", stat_fast: "× быстрее с C++17",
             features_eyebrow: "Возможности", features_title: "Всё, что нужно переводчику", features_sub: "Девять суперсил Köpri — и все работают без интернета.",
             f1_title: "Камера-перевод (Hybrid OCR)", f1_text: "Наведи камеру — Google ML Kit распознаёт латиницу за ~0.3 с, а Tesseract подхватывает кириллицу, арабицу, CJK и деванагари.",
@@ -75,7 +76,7 @@ if (window.firebase && firebase.apps && firebase.apps.length === 0 && hasRealFir
             q4: "Как работает гибридный OCR?", a4: "Латиницу распознаёт Google ML Kit (~0.3 с), а кириллицу, арабицу, CJK и деванагари — Tesseract.",
             q5: "Кто создал Köpri?", a5: "Android-разработчик — Sylyýew Aýnazar, веб — Annaýew Döwlet.",
             q6: "Мои данные в безопасности?", a6: "Да: всё хранится локально на устройстве и никогда не отправляется в сеть.",
-            fb_eyebrow: "Отзывы", fb_title: "Оставьте свой комментарий", fb_sub: "Расскажите, что вам нравится, и что можно улучшить в Köpri.", fb_name: "Имя", fb_email: "Email (необязательно)", fb_message: "Комментарий", fb_submit: "Отправить", fb_success: "Спасибо! Ваш отзыв отправлен.", fb_error: "Сначала подключите Firebase и заполните реальные ключи проекта.", fb_recent: "Последние комментарии", fb_empty: "Пока нет комментариев.", fb_author: "Автор", fb_email_label: "Email", fb_comment: "Комментарий", fb_name_placeholder: "Ваше имя", fb_email_placeholder: "name@example.com", fb_message_placeholder: "Напишите ваш отзыв...",
+            fb_eyebrow: "Отзывы", fb_title: "Оставьте свой комментарий", fb_sub: "Расскажите, что вам нравится, и что можно улучшить в Köpri.", fb_name: "Имя", fb_email: "Email (необязательно)", fb_message: "Комментарий", fb_submit: "Отправить", fb_success: "Спасибо! Ваш отзыв отправлен.", fb_error: "Сначала подключите Firebase и заполните реальные ключи проекта.", fb_unavailable: "Комментарии временно недоступны.", fb_rate_limit: "Подождите 30 секунд перед следующей отправкой.", fb_validation: "Проверьте текст комментария.", fb_recent: "Последние комментарии", fb_empty: "Пока нет комментариев.", fb_author: "Автор", fb_email_label: "Email", fb_comment: "Комментарий", fb_name_placeholder: "Ваше имя", fb_email_placeholder: "name@example.com", fb_message_placeholder: "Напишите ваш отзыв...",
             cta_title: "Готов перекинуть мост между языками?", cta_sub: "Скачай Köpri бесплатно — и переводи без границ.", cta_btn1: "Скачать APK", cta_btn2: "Star on GitHub", cta_note: "Бесплатно · Открытый код · Навсегда",
             ft_tag: "Мост между языками. Офлайн.", ft_made: "Сделано с ❤️, Flutter и C++"
         },
@@ -85,6 +86,8 @@ if (window.firebase && firebase.apps && firebase.apps.length === 0 && hasRealFir
             hero_title_a: "Dilleriň arasyndaky köpri", hero_title_b: "— jebiňde",
             hero_sub: "Köpri — mugt oflaýn terjimeçi: gibrid kamera OCR, ägirt uly sözleşme kitaby we bada-bat tekst terjimesi. Internetsiz. Bulutsyz. Çäksiz.",
             hero_cta_apk: "APK göçürip al", hero_cta_features: "Mümkinçilikler", hero_chip_offline: "100% oflaýn",
+            release_aria: "v2.0.0 täzelenmesi ýakynda çykýar", release_kicker: "Indiki täzelenme", release_title: "v2.0.0 eýýäm gözýetimde", release_text: "Has köp dil, has akylly kamera we terjime etmegiň täze ýollary. Garaş — güýçli bolar.",
+            fb_eyebrow: "Teswirler", fb_title: "Teswiriňizi galdyryň", fb_sub: "Köpride nämäniň halaýandygyňyzy we nämäniň gowulandyrylyp bilinjekdigini aýdyň.", fb_name: "At", fb_email: "Email (islege görä)", fb_message: "Teswir", fb_submit: "Ugrat", fb_success: "Sag boluň! Teswiriňiz ugradyldy.", fb_error: "Ilki Firebase-i birikdiriň we hakyky taslama açarlaryny goşuň.", fb_unavailable: "Teswirler wagtlaýyn elýeterli däl.", fb_rate_limit: "Indiki teswiri ugratmak üçin 30 sekunt garaşyň.", fb_validation: "Teswir tekstini barlaň.", fb_recent: "Soňky teswirler", fb_empty: "Entek teswir ýok.", fb_author: "Awtor", fb_email_label: "Email", fb_comment: "Teswir", fb_name_placeholder: "Adyňyz", fb_email_placeholder: "name@example.com", fb_message_placeholder: "Teswiriňizi şu ýere ýazyň...",
             stat_langs: "dil", stat_phrases: "sözlem sözleşme kitabynda", stat_models: "OCR modeli", stat_speed: "sekuntda tanaýar", stat_pkgs: "açyk paket içeride", stat_fast: "× çalt C++17 bilen",
             features_eyebrow: "Mümkinçilikler", features_title: "Terjimeçi üçin gerek bolan hemme zat", features_sub: "Köpri-iň dokuz güýji — hemmesi internetsiz işleýär.",
             f1_title: "Kamera terjimesi (Hybrid OCR)", f1_text: "Kameraňy gönükdir — Google ML Kit latyn ýazuwyny ~0.3 s-da tanaýar, Tesseract kiril, arap, CJK we dewanagari ýazuwlaryny okaýar.",
@@ -136,6 +139,7 @@ if (window.firebase && firebase.apps && firebase.apps.length === 0 && hasRealFir
             hero_title_a: "A bridge between languages", hero_title_b: "— in your pocket",
             hero_sub: "Köpri is a free offline-first translator with hybrid camera OCR, a huge phrasebook and instant text-to-text translation. No internet. No cloud. No borders.",
             hero_cta_apk: "Download APK", hero_cta_features: "Features", hero_chip_offline: "100% offline",
+            release_aria: "The v2.0.0 update is coming soon", release_kicker: "Next update", release_title: "v2.0.0 is on the horizon", release_text: "More languages, a smarter camera and new ways to translate. Stay tuned — it will be big.",
             stat_langs: "languages", stat_phrases: "phrases in phrasebook", stat_models: "OCR models", stat_speed: "seconds to recognize text", stat_pkgs: "open-source packages inside", stat_fast: "× faster with C++17",
             features_eyebrow: "Features", features_title: "Everything a translator needs", features_sub: "Nine superpowers of Köpri — all working without internet.",
             f1_title: "Camera translation (Hybrid OCR)", f1_text: "Point your camera — Google ML Kit reads Latin scripts in ~0.3s while Tesseract covers Cyrillic, Arabic, CJK and Devanagari.",
@@ -178,7 +182,7 @@ if (window.firebase && firebase.apps && firebase.apps.length === 0 && hasRealFir
             q4: "How does hybrid OCR work?", a4: "Latin scripts are read by Google ML Kit (~0.3s); Cyrillic, Arabic, CJK and Devanagari by Tesseract.",
             q5: "Who created Köpri?", a5: "Android developer — Sylyýew Aýnazar, web — Annaýew Döwlet.",
             q6: "Is my data safe?", a6: "Yes: everything is stored on-device and never sent to the network.",
-            fb_eyebrow: "Feedback", fb_title: "Leave a comment", fb_sub: "Tell us what you like and what we can improve in Köpri.", fb_name: "Name", fb_email: "Email (optional)", fb_message: "Comment", fb_submit: "Send", fb_success: "Thanks! Your feedback was sent.", fb_error: "Connect Firebase first and add your real project keys.", fb_recent: "Recent comments", fb_empty: "No comments yet.", fb_author: "Author", fb_email_label: "Email", fb_comment: "Comment", fb_name_placeholder: "Your name", fb_email_placeholder: "name@example.com", fb_message_placeholder: "Write your feedback here...",
+            fb_eyebrow: "Feedback", fb_title: "Leave a comment", fb_sub: "Tell us what you like and what we can improve in Köpri.", fb_name: "Name", fb_email: "Email (optional)", fb_message: "Comment", fb_submit: "Send", fb_success: "Thanks! Your feedback was sent.", fb_error: "Connect Firebase first and add your real project keys.", fb_unavailable: "Comments are temporarily unavailable.", fb_rate_limit: "Please wait 30 seconds before sending another comment.", fb_validation: "Please check the comment text.", fb_recent: "Recent comments", fb_empty: "No comments yet.", fb_author: "Author", fb_email_label: "Email", fb_comment: "Comment", fb_name_placeholder: "Your name", fb_email_placeholder: "name@example.com", fb_message_placeholder: "Write your feedback here...",
             cta_title: "Ready to bridge languages?", cta_sub: "Get Köpri for free — and translate without borders.", cta_btn1: "Download APK", cta_btn2: "Star on GitHub", cta_note: "Free · Open source · Forever",
             ft_tag: "A bridge between languages. Offline.", ft_made: "Made with ❤️, Flutter and C++"
         }
@@ -207,9 +211,20 @@ if (window.firebase && firebase.apps && firebase.apps.length === 0 && hasRealFir
         var dict = I18N[lang];
         $$('[data-i18n]').forEach(function (el) {
             var k = el.getAttribute('data-i18n');
-            if (dict[k] !== undefined) { el.innerHTML = dict[k]; }
+            if (dict[k] !== undefined) {
+                if (k === 'gm_cpp') el.innerHTML = dict[k];
+                else el.textContent = dict[k];
+            }
         });
-        $$('.lang-btn').forEach(function (b) { b.classList.toggle('active', b.getAttribute('data-lang') === lang) });
+        $$('[data-i18n-label]').forEach(function (el) {
+            var k = el.getAttribute('data-i18n-label');
+            if (dict[k] !== undefined) { el.setAttribute('aria-label', dict[k]); }
+        });
+        $$('.lang-btn').forEach(function (b) {
+            var isActive = b.getAttribute('data-lang') === lang;
+            b.classList.toggle('active', isActive);
+            b.setAttribute('aria-pressed', isActive ? 'true' : 'false');
+        });
         $$('.copy-btn').forEach(function (b) { if (!b.dataset.done) b.textContent = dict.copy_btn; });
         var feedbackName = $('#feedbackName');
         var feedbackEmail = $('#feedbackEmail');
@@ -218,7 +233,7 @@ if (window.firebase && firebase.apps && firebase.apps.length === 0 && hasRealFir
         if (feedbackEmail) feedbackEmail.placeholder = dict.fb_email_placeholder || feedbackEmail.placeholder;
         if (feedbackMessage) feedbackMessage.placeholder = dict.fb_message_placeholder || feedbackMessage.placeholder;
         demoResultHint();
-        renderFeedbackList(window.kopriFeedbackItems || []);
+        renderFeedbackList(window.kopriFeedbackItems || [], window.kopriFeedbackError);
     }
     $$('.lang-btn').forEach(function (b) {
         b.addEventListener('click', function () { applyI18n(b.getAttribute('data-lang')); });
@@ -242,23 +257,27 @@ if (window.firebase && firebase.apps && firebase.apps.length === 0 && hasRealFir
     burger.addEventListener('click', function () {
         var isOpen = mobileMenu.classList.toggle('open');
         burger.setAttribute('aria-expanded', isOpen ? 'true' : 'false');
+        mobileMenu.setAttribute('aria-hidden', isOpen ? 'false' : 'true');
     });
     $$('#mobileMenu a').forEach(function (a) {
         a.addEventListener('click', function () {
             mobileMenu.classList.remove('open');
             burger.setAttribute('aria-expanded', 'false');
+            mobileMenu.setAttribute('aria-hidden', 'true');
         });
     });
     document.addEventListener('keydown', function (event) {
         if (event.key === 'Escape') {
             mobileMenu.classList.remove('open');
             burger.setAttribute('aria-expanded', 'false');
+            mobileMenu.setAttribute('aria-hidden', 'true');
         }
     });
     document.addEventListener('click', function (event) {
         if (mobileMenu.classList.contains('open') && !mobileMenu.contains(event.target) && !burger.contains(event.target)) {
             mobileMenu.classList.remove('open');
             burger.setAttribute('aria-expanded', 'false');
+            mobileMenu.setAttribute('aria-hidden', 'true');
         }
     });
     /* ================= REVEAL ================= */
@@ -301,6 +320,7 @@ if (window.firebase && firebase.apps && firebase.apps.length === 0 && hasRealFir
     shots.forEach(function (_, i) {
         var d = document.createElement('button');
         d.setAttribute('aria-label', 'Slide ' + (i + 1));
+        d.setAttribute('aria-pressed', 'false');
         d.addEventListener('click', function () { goShot(i); resetAuto(); });
         dotsBox.appendChild(d);
     });
@@ -308,19 +328,38 @@ if (window.firebase && firebase.apps && firebase.apps.length === 0 && hasRealFir
     function shotStep() { var s = shots[1] ? shots[1].getBoundingClientRect().left - shots[0].getBoundingClientRect().left : 300; return s; }
     function goShot(i) {
         shotIndex = Math.max(0, Math.min(shots.length - 1, i));
-        track.scrollTo({ left: shotIndex * shotStep() - ((track.clientWidth - shots[0].getBoundingClientRect().width) / 2) + (shotStep() - shots[0].getBoundingClientRect().width) / 2, behavior: 'smooth' });
+        var trackRect = track.getBoundingClientRect();
+        var shotRect = shots[shotIndex].getBoundingClientRect();
+        var targetLeft = track.scrollLeft + shotRect.left - trackRect.left - (track.clientWidth - shotRect.width) / 2;
+        track.scrollTo({ left: Math.max(0, targetLeft), behavior: 'smooth' });
+        updateShots();
     }
     function updateShots() {
-        var i = Math.round(track.scrollLeft / shotStep());
-        i = Math.max(0, Math.min(shots.length - 1, i));
+        var trackRect = track.getBoundingClientRect();
+        var trackCenter = trackRect.left + trackRect.width / 2;
+        var i = shots.reduce(function (closestIndex, shot, index) {
+            var rect = shot.getBoundingClientRect();
+            var distance = Math.abs(rect.left + rect.width / 2 - trackCenter);
+            var closestRect = shots[closestIndex].getBoundingClientRect();
+            var closestDistance = Math.abs(closestRect.left + closestRect.width / 2 - trackCenter);
+            return distance < closestDistance ? index : closestIndex;
+        }, 0);
         shotIndex = i;
-        dots.forEach(function (d, j) { d.classList.toggle('active', j === i) });
+        dots.forEach(function (d, j) {
+            var isActive = j === i;
+            d.classList.toggle('active', isActive);
+            d.setAttribute('aria-pressed', isActive ? 'true' : 'false');
+        });
         shots.forEach(function (s, j) { s.classList.toggle('active', j === i) });
     }
     track.addEventListener('scroll', function () { requestAnimationFrame(updateShots); }, { passive: true });
     $('#shotsPrev').addEventListener('click', function () { goShot(shotIndex - 1); resetAuto(); });
     $('#shotsNext').addEventListener('click', function () { goShot(shotIndex + 1); resetAuto(); });
-    function startAuto() { autoTimer = setInterval(function () { goShot(shotIndex >= shots.length - 1 ? 0 : shotIndex + 1); }, 4500); }
+    var reduceMotion = window.matchMedia('(prefers-reduced-motion: reduce)');
+    function startAuto() {
+        if (reduceMotion.matches) return;
+        autoTimer = setInterval(function () { goShot(shotIndex >= shots.length - 1 ? 0 : shotIndex + 1); }, 4500);
+    }
     function resetAuto() { clearInterval(autoTimer); startAuto(); }
     startAuto(); updateShots();
     /* ================= DEMO ================= */
@@ -347,7 +386,11 @@ if (window.firebase && firebase.apps && firebase.apps.length === 0 && hasRealFir
     $$('.demo-lang').forEach(function (b) {
         b.addEventListener('click', function () {
             demoTarget = b.getAttribute('data-target');
-            $$('.demo-lang').forEach(function (x) { x.classList.toggle('active', x === b) });
+            $$('.demo-lang').forEach(function (x) {
+                var isActive = x === b;
+                x.classList.toggle('active', isActive);
+                x.setAttribute('aria-pressed', isActive ? 'true' : 'false');
+            });
             runDemo();
         });
     });
@@ -365,7 +408,9 @@ if (window.firebase && firebase.apps && firebase.apps.length === 0 && hasRealFir
             if (i >= text.length) clearInterval(typeTimer);
         }, 26);
     }
+    $('#demoBtn').addEventListener('click', runDemo);
     $$('.demo-lang')[0].classList.add('active');
+    $$('.demo-lang')[0].setAttribute('aria-pressed', 'true');
     demoResultHint();
     /* ================= FAQ ================= */
     $$('.faq-item').forEach(function (item) {
@@ -389,11 +434,21 @@ if (window.firebase && firebase.apps && firebase.apps.length === 0 && hasRealFir
     var feedbackStatus = $('#feedbackStatus');
     var feedbackList = $('#feedbackList');
     window.kopriFeedbackItems = [];
-    var lastFeedbackSubmit = 0;
+    var feedbackSubmit = feedbackForm ? feedbackForm.querySelector('[type="submit"]') : null;
+    var lastFeedbackSubmit = Number(localStorage.getItem('kopri_feedback_last_submit') || 0);
+    window.kopriFeedbackError = false;
 
-    function renderFeedbackList(items) {
+    function renderFeedbackList(items, hasError) {
         if (!feedbackList) return;
+        window.kopriFeedbackError = Boolean(hasError);
         feedbackList.innerHTML = '';
+        if (hasError) {
+              var error = document.createElement('div');
+              error.className = 'feedback-empty feedback-error';
+              error.textContent = I18N[currentLang].fb_unavailable || 'Comments are temporarily unavailable.';
+            feedbackList.appendChild(error);
+            return;
+        }
         if (!items || !items.length) {
             var empty = document.createElement('div');
             empty.className = 'feedback-empty';
@@ -437,14 +492,14 @@ if (window.firebase && firebase.apps && firebase.apps.length === 0 && hasRealFir
 
     function loadFeedbackList() {
         if (!window.kopriDb) {
-            renderFeedbackList([]);
+            renderFeedbackList([], true);
             return;
         }
 
         window.kopriDb.collection('comments')
-            .orderBy('createdAt', 'desc')
-            .limit(20)
-            .onSnapshot(function (snapshot) {
+                .orderBy('createdAt', 'desc')
+                .limit(20)
+                .onSnapshot(function (snapshot) {
                 var items = [];
                 snapshot.forEach(function (doc) {
                     var data = doc.data();
@@ -456,9 +511,11 @@ if (window.firebase && firebase.apps && firebase.apps.length === 0 && hasRealFir
                     });
                 });
                 window.kopriFeedbackItems = items;
+                window.kopriFeedbackError = false;
                 renderFeedbackList(items);
-            }, function () {
-                renderFeedbackList([]);
+            }, function (error) {
+                console.error('Feedback load error:', error);
+                renderFeedbackList([], true);
             });
     }
 
@@ -499,19 +556,24 @@ if (window.firebase && firebase.apps && firebase.apps.length === 0 && hasRealFir
                 return;
             }
 
+            if (feedbackSubmit) feedbackSubmit.disabled = true;
             window.kopriDb.collection('comments').add({
                 name: name || 'Anonymous',
+                email: email || null,
                 message: message,
                 createdAt: firebase.firestore.FieldValue.serverTimestamp()
             }).then(function () {
                 lastFeedbackSubmit = Date.now();
+                localStorage.setItem('kopri_feedback_last_submit', String(lastFeedbackSubmit));
                 feedbackForm.reset();
+                if (feedbackSubmit) feedbackSubmit.disabled = false;
                 feedbackStatus.textContent = I18N[lang].fb_success;
                 feedbackStatus.classList.remove('error');
                 feedbackStatus.classList.add('success');
             }).catch(function (error) {
                 console.error('Feedback save error:', error);
-                feedbackStatus.textContent = 'Something went wrong while saving the comment.';
+                if (feedbackSubmit) feedbackSubmit.disabled = false;
+                feedbackStatus.textContent = I18N[lang].fb_unavailable || 'Comments are temporarily unavailable.';
                 feedbackStatus.classList.remove('success');
                 feedbackStatus.classList.add('error');
             });
