@@ -3,7 +3,7 @@
 <img src="./assets/app_icon.png" alt="Köpri" width="120" />
 
 
-<img src="./assets/cover.png" alt="cover" width="100%" />
+<img src="./assets/cover.png" alt="cover" width="70%" />
 
 # Köpri — Web Showcase
 
