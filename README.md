@@ -203,7 +203,7 @@ Recommended optimizations:
 
 <div align="center">
 
-### 🌟 Made with ❤️, Flutter and C++
+### 🌟 Made with ❤️, HTML and CSS an JS
 
 **A bridge between languages. Offline. Forever.**
 
