@@ -188,7 +188,7 @@ Recommended optimizations:
 
 ### 📄 License
 
-**Apache License 2.0** — feel free to use in your projects.
+**MIT License** — feel free to use in your projects.
 
 ---
 
