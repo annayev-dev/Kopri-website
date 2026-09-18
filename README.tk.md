@@ -188,7 +188,7 @@ Optimizasiýa maslahatlar:
 
 ### 📄 Liseziýa
 
-**Apache License 2.0** — öz taslamalarynyzda erkin ulanyň.
+**MIT License** — öz taslamalarynyzda erkin ulanyň.
 
 ---
 
